@@ -4,5 +4,7 @@ pub mod code_analysis;
 pub mod analytics;
 pub mod collaboration;
 pub mod ot_engine;
+pub mod inheritance;
 
 pub use ot_engine::OTEngine;
+pub use inheritance::InheritanceEngine;

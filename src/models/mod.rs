@@ -3,6 +3,7 @@ use uuid::Uuid;
 use chrono::{DateTime, Utc};
 
 pub mod collaboration;
+pub mod inheritance;
 
 // User Models
 #[derive(Debug, Clone, Serialize, Deserialize)]
