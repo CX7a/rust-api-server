@@ -2,6 +2,8 @@ use serde::{Deserialize, Serialize};
 use uuid::Uuid;
 use chrono::{DateTime, Utc};
 
+pub mod collaboration;
+
 // User Models
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct User {
@@ -166,3 +168,14 @@ pub struct Metric {
 pub struct TokenRefreshRequest {
     pub refresh_token: String,
 }
+
+// Re-export collaboration models
+pub use collaboration::{
+    Team, TeamMember, TeamRole, ProjectMember, ProjectPermission,
+    CodeReview, ReviewComment, ReviewApproval, ApprovalStatus,
+    CollaborativeSession, SessionParticipant, DocumentVersion,
+    CreateTeamRequest, UpdateTeamRequest, AddTeamMemberRequest,
+    CreateCodeReviewRequest, UpdateCodeReviewRequest, AddReviewCommentRequest,
+    UpdateReviewCommentRequest, SubmitApprovalRequest, CreateCollaborativeSessionRequest,
+    DocumentOperation, OperationType,
+};

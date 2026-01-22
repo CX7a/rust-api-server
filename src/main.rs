@@ -13,6 +13,7 @@ mod config;
 mod db;
 mod error;
 mod handlers;
+mod middleware;
 mod middleware_auth;
 mod models;
 mod services;
