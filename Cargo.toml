@@ -1,0 +1,58 @@
+[package]
+name = "compilex7-backend"
+version = "1.0.0"
+edition = "2021"
+
+[[bin]]
+name = "compilex7"
+path = "src/main.rs"
+
+[dependencies]
+# Web Framework
+axum = "0.7"
+tokio = { version = "1", features = ["full"] }
+tower = "0.4"
+tower-http = { version = "0.5", features = ["cors", "trace"] }
+
+# Serialization
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+# Database
+sqlx = { version = "0.7", features = ["runtime-tokio-native-tls", "postgres"] }
+uuid = { version = "1", features = ["v4", "serde"] }
+
+# Authentication & Security
+jsonwebtoken = "9"
+bcrypt = "0.15"
+rand = "0.8"
+
+# Error Handling
+thiserror = "1"
+anyhow = "1"
+
+# Logging & Tracing
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "json"] }
+
+# Configuration
+config = "0.13"
+dotenv = "0.15"
+
+# AI Integration
+reqwest = { version = "0.11", features = ["json"] }
+async-trait = "0.1"
+
+# Utilities
+chrono = { version = "0.4", features = ["serde"] }
+futures = "0.3"
+parking_lot = "0.12"
+lazy_static = "1.4"
+
+# Testing
+test-case = "3"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1

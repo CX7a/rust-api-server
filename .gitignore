@@ -1,0 +1,75 @@
+# Rust build artifacts
+/target/
+Cargo.lock
+**/*.rs.bk
+*.pdb
+
+# IDE and Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.iml
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# Environment variables (secrets only)
+.env
+.env.local
+.env.*.local
+
+# Keep .env.example in git (configuration template)
+!.env.example
+
+# Dependencies
+node_modules/
+dist/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# System files
+Thumbs.db
+.Thumbs.db
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# OS specific
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.Python
+
+# Testing
+.coverage
+htmlcov/
+
+# Local development
+.venv
+venv/
+env/
+ENV/
+
+# Docker volumes
+postgres_data/
+pgadmin_data/
