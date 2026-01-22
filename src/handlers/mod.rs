@@ -7,3 +7,4 @@ pub mod team;
 pub mod collaboration;
 pub mod code_review;
 pub mod teams;
+pub mod inheritance;
